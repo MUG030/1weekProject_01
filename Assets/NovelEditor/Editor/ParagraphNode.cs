@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using UnityEditor.UIElements;
 using System;
 using System.Linq;
-using Newtonsoft.Json.Linq;
+// using Newtonsoft.Json.Linq;
 
 
 namespace NovelEditor.Editor

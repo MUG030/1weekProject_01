@@ -25,11 +25,9 @@ MonoBehaviour:
     _nextParagraphIndex: -1
     nodeName: 
     _dialogueList:
-    - index: 0
-      open: 0
-      elementNum: 7
+    - open: 0
       Name: 
-      text: "\u9752\u3044\u304A\u3070\u3051\u3060\u3002\u81EA\u5206\u306B\u305D\u3063\u304F\u308A"
+      text: "\u9752\u3044\u304A\u3070\u3051\u3060\u3002\u81EA\u5206\u306B\u305D\u3063\u304F\u308A\u3060\u306D"
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
