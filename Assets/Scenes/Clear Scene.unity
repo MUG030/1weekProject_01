@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a632ae86e80b942beef2507a81561d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Prologue Scene
+  sceneName: Credit Scene
 --- !u!114 &105882034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,7 +1218,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cb637dede34609649bf40a9bdefa71ee, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0

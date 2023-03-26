@@ -76,12 +76,12 @@ MonoBehaviour:
       y: 0
       width: 108
       height: 97
-    _nextParagraphIndex: 2
+    _nextParagraphIndex: 3
     nodeName: 
     _dialogueList:
     - open: 0
       Name: "\u685C \u7F8E\u7D50"
-      text: "\u6B21\u306E\u4F1A\u8A71\u3067\u3059\u3002"
+      text: "\u3082\u3046\u3059\u3050\u3042\u3044\u3064\u3068\u5225\u308C\u3066\u4E8C\u304B\u6708\u8FD1\u304F\u305F\u3064\u306E\u304B\u3002"
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -125,8 +125,273 @@ MonoBehaviour:
     _index: 2
     _nodePosition:
       serializedVersion: 2
-      x: 383
+      x: 595
+      y: 195
+      width: 135
+      height: 97
+    _nextParagraphIndex: 7
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: "\u685C \u7F8E\u7D50"
+      text: "\u3042\u3044\u3064\u306E\u59B9\u304B\u30DD\u30B9\u30C8\u306B\u3067\u3082\u3044\u308C\u3066\u304A\u304F\u304B\u3002"
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 3
+    _nodePosition:
+      serializedVersion: 2
+      x: 427
       y: 0
+      width: 120
+      height: 97
+    _nextParagraphIndex: 4
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: "\u685C \u7F8E\u7D50"
+      text: "\u3042\u3093\u306A\u5225\u308C\u65B9\u3059\u308B\u3050\u3089\u3044\u306A\u3089\u3001\u3082\u3046\u5C11\u3057\u30DE\u30B7\u306A\u6700\u5F8C\u3082\u3042\u3063\u305F\u306E\u306B\u3002"
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 4
+    _nodePosition:
+      serializedVersion: 2
+      x: 595
+      y: 0
+      width: 120
+      height: 97
+    _nextParagraphIndex: 5
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: "\u685C \u7F8E\u7D50"
+      text: "\u2026"
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 5
+    _nodePosition:
+      serializedVersion: 2
+      x: 655
+      y: 97
+      width: 120
+      height: 97
+    _nextParagraphIndex: 6
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: "\u685C \u7F8E\u7D50"
+      text: "\u79C1... \u3069\u3046\u3057\u3066....."
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 6
+    _nodePosition:
+      serializedVersion: 2
+      x: 390
+      y: 146
+      width: 120
+      height: 97
+    _nextParagraphIndex: 2
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: "\u685C \u7F8E\u7D50"
+      text: "\u3093\uFF1F\u306A\u306B\u3053\u308C\u3002\n\u306A\u3093\u3067\u3053\u3053\u306B\u3042\u3044\u3064\u306B\u65E5\u8A18\u304C\uFF1F"
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 7
+    _nodePosition:
+      serializedVersion: 2
+      x: 831
+      y: 195
       width: 108
       height: 97
     _nextParagraphIndex: -1
@@ -134,7 +399,8 @@ MonoBehaviour:
     _dialogueList:
     - open: 0
       Name: "\u685C \u7F8E\u7D50"
-      text: "\u6700\u5F8C\u306E\u4F1A\u8A71\u3067\u3059\u3002"
+      text: "\uFF08\u305D\u3046\u3044\u3048\u3070\u3001\u3042\u3044\u3064\u65E5\u8A18\u306A\u3093\u3066\u66F8\u304F\u6B8A\u52DD\u306A\u3084\u3064\u3060\u3063\u3051...\uFF1F\n\u3000 
+        \u3061\u3087\u3063\u3068\u4E2D\u8EAB\u8997\u3044\u3066\u307F\u308B\u304B\uFF09"
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -174,9 +440,20 @@ MonoBehaviour:
     detailOpen: 0
     _next: 2
     _nextChoiceIndexes: ffffffff
-  _choiceList: []
+  _choiceList:
+  - _enabled: 0
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: 543
+      y: -226
+      width: 120
+      height: 77
+    _nextParagraphIndex: -1
+    nodeName: 
+    text: a
   graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: 163, y: 211, z: 0}
+  graphPosition: {x: -319, y: 104, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 1050452086532529603, guid: 42651bc977a6fc340a10040562402af8, type: 3}

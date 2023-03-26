@@ -1,9 +1,14 @@
+using Cysharp.Threading.Tasks.Triggers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public static PlayerController instance;
+
     /// <summary> Rigidbody2D型の変数 </summary>
     Rigidbody2D rbody;
     /// <summary> 入力用変数 </summary>
@@ -19,8 +24,22 @@ public class PlayerController : MonoBehaviour
     /// <summary> 地面に立っているフラグ </summary>
     bool _onGround = false;
 
+    public GameObject targetMoveBlock;
+    public GameObject TargetMoveBlock;
+    public GameObject TArgetMoveBlock;
+    public bool moveblock = false;
+
+    Animator animator;
+    public string stopAnime = "PlayerStop";
+    public string moveAnime = "PlayerMove";
+    public string blockAnime = "PlayerBlock";
+    public string deadAnime = "PlayerOver";
+    string nowAnime = "";
+    string oldAnime = "";
+
     /// <summary> ゲームの状態 </summary>
     public static string _gameState = "playing";
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +47,11 @@ public class PlayerController : MonoBehaviour
         Debug.Log("スタート");
         // Rigidbody2Dをとる
         rbody = GetComponent<Rigidbody2D>();
+
+        animator = GetComponent<Animator>();
+        nowAnime = stopAnime;
+        oldAnime = stopAnime;
+
         // ゲーム中にする
         _gameState = "playing";
     }
@@ -59,6 +83,15 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+        // 動かす
+        if (Input.GetButtonDown("Fire3"))
+        {
+            moveblock = true;
+        }
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     /// <summary>
@@ -76,7 +109,6 @@ public class PlayerController : MonoBehaviour
         // 地面の上もしくは速度が0ではない
         if (_onGround || _axisH != 0)
         {
-            Debug.Log("移動");
             // 速度を更新する
             rbody.velocity = new Vector2(_axisH * _speed, rbody.velocity.y);
         }
@@ -88,6 +120,23 @@ public class PlayerController : MonoBehaviour
             Vector2 jumpPw = new Vector2(0, _jump);         //じゃんぷさせるためのメソッド
             rbody.AddForce(jumpPw, ForceMode2D.Impulse);    //瞬間的な力を加える
             _gojump = false;
+        }
+        if (_onGround)
+        {
+            if (_axisH == 0)
+            {
+                nowAnime = stopAnime;
+            }
+            else
+            {
+                nowAnime = moveAnime;
+            }
+        }
+
+        if (nowAnime != oldAnime)
+        {
+            oldAnime = nowAnime;
+            animator.Play(nowAnime);
         }
     }
 
@@ -118,6 +167,35 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "MoveBlock" && moveblock)
+        {
+            MoveBlock movblock = targetMoveBlock.GetComponent<MoveBlock>();
+            MoveBlock movblock1 = TargetMoveBlock.GetComponent<MoveBlock>();
+            MoveBlock movblock2 = TArgetMoveBlock.GetComponent<MoveBlock>();
+            animator.Play(blockAnime);
+            movblock.Move();
+            movblock1.Move();
+            movblock2.Move();
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "MoveBlock")
+        {
+            moveblock = false;
+            Debug.Log("止めましょう");
+            MoveBlock movblock = targetMoveBlock.GetComponent<MoveBlock>();
+            MoveBlock movblock1 = TargetMoveBlock.GetComponent<MoveBlock>();
+            MoveBlock movblock2 = TArgetMoveBlock.GetComponent<MoveBlock>();
+            movblock.Stop();
+            movblock1.Stop();
+            movblock2.Stop();
+        }
+    }
+
     /// <summary>
     /// ゴールメソッド
     /// </summary>
@@ -125,9 +203,8 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Goal");
         _gameState = "gameclear";
-        transform.rotation = Quaternion.Euler(0, 0, 25);
         // ゲーム停止メソッドを呼ぶ
-        GameStop();
+        SceneManager.LoadScene("Goal Scene");
     }
 
     /// <summary>
@@ -137,11 +214,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("しんだ");
         _gameState = "gameover";
-        // ゲーム停止メソッドを呼ぶ
-        GameStop();
-        // ゲームオーバー演出
-        // プレイヤーの当たり判定を消す
-        GetComponent<BoxCollider2D>().enabled = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         // プレイヤーを少し上に上げる
         rbody.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
     }
