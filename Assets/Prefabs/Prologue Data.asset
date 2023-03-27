@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Prologue Data
   m_EditorClassIdentifier: 
   _locations:
-  - {fileID: 1050452086532529603, guid: 42651bc977a6fc340a10040562402af8, type: 3}
+  - {fileID: 1705011205105566849, guid: 5eebc4978c5a5544baf295ab215eaa51, type: 3}
   _paragraphList:
   - _enabled: 1
     _index: 0
@@ -453,7 +453,7 @@ MonoBehaviour:
     nodeName: 
     text: a
   graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: -319, y: 104, z: 0}
+  graphPosition: {x: 76, y: 94, z: 0}
   havePreLocations: 0
   newLocations:
-  - {fileID: 1050452086532529603, guid: 42651bc977a6fc340a10040562402af8, type: 3}
+  - {fileID: 1705011205105566849, guid: 5eebc4978c5a5544baf295ab215eaa51, type: 3}
