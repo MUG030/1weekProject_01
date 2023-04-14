@@ -1,4 +1,4 @@
-using Cysharp.Threading.Tasks.Triggers;
+ï»¿using Cysharp.Threading.Tasks.Triggers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,19 +9,19 @@ public class PlayerController : MonoBehaviour
 
     public static PlayerController instance;
 
-    /// <summary> Rigidbody2DŒ^‚Ì•Ï” </summary>
+    /// <summary> Rigidbody2Dï¿½^ï¿½Ì•Ïï¿½ </summary>
     Rigidbody2D rbody;
-    /// <summary> “ü—Í—p•Ï” </summary>
+    /// <summary> ï¿½ï¿½ï¿½Í—pï¿½Ïï¿½ </summary>
     private float _axisH = 0.0f;
-    /// <summary> ˆÚ“®•Ï” </summary>
+    /// <summary> ï¿½Ú“ï¿½ï¿½Ïï¿½ </summary>
     public float _speed = 3.0f;
-    /// <summary> ƒWƒƒƒ“ƒv•Ï” </summary>
+    /// <summary> ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Ïï¿½ </summary>
     public float _jump = 9.0f;
-    /// <summary> ’…’n‚Å‚«‚éƒŒƒCƒ„[ </summary>
+    /// <summary> ï¿½ï¿½ï¿½nï¿½Å‚ï¿½ï¿½éƒŒï¿½Cï¿½ï¿½ï¿½[ </summary>
     public LayerMask groundLayer;
-    /// <summary> ƒWƒƒƒ“ƒvŠJnƒtƒ‰ƒO </summary>
+    /// <summary> ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Jï¿½nï¿½tï¿½ï¿½ï¿½O </summary>
     bool _gojump = false;
-    /// <summary> ’n–Ê‚É—§‚Á‚Ä‚¢‚éƒtƒ‰ƒO </summary>
+    /// <summary> ï¿½nï¿½Ê‚É—ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O </summary>
     bool _onGround = false;
 
     public GameObject targetMoveBlock;
@@ -37,53 +37,53 @@ public class PlayerController : MonoBehaviour
     string nowAnime = "";
     string oldAnime = "";
 
-    /// <summary> ƒQ[ƒ€‚Ìó‘Ô </summary>
+    /// <summary> ï¿½Qï¿½[ï¿½ï¿½ï¿½Ìï¿½ï¿½ </summary>
     public static string _gameState = "playing";
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("ƒXƒ^[ƒg");
-        // Rigidbody2D‚ğ‚Æ‚é
+        Debug.Log("ï¿½Xï¿½^ï¿½[ï¿½g");
+        // Rigidbody2Dï¿½ï¿½ï¿½Æ‚ï¿½
         rbody = GetComponent<Rigidbody2D>();
 
         animator = GetComponent<Animator>();
         nowAnime = stopAnime;
         oldAnime = stopAnime;
 
-        // ƒQ[ƒ€’†‚É‚·‚é
+        // ï¿½Qï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½
         _gameState = "playing";
     }
 
     // Update is called once per frame
     void Update()
     {
-        // ƒQ[ƒ€’†ˆÈŠO‚Ì”»’è‚Åƒƒ\ƒbƒh“à‚ÌˆÈ‰º‚ğÀs‚µ‚È‚¢
+        // ï¿½Qï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ÈŠOï¿½Ì”ï¿½ï¿½ï¿½Åƒï¿½ï¿½\ï¿½bï¿½hï¿½ï¿½ï¿½ÌˆÈ‰ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½È‚ï¿½
         if (_gameState != "playing")
         {
             return;
         }
-        //@…•½•ûŒü‚Ì“ü—Í‚ğŠm”F‚·‚é
+        //ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì“ï¿½ï¿½Í‚ï¿½ï¿½mï¿½Fï¿½ï¿½ï¿½ï¿½
         _axisH = Input.GetAxisRaw("Horizontal");
-        //@Œü‚«‚Ì’²®
+        //ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½Ì’ï¿½ï¿½ï¿½
         if (_axisH > 0.0f)
         {
-            // ‰E•ûŒü‚ÌŒü‚«
+            // ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½ÌŒï¿½ï¿½ï¿½
             transform.localScale = new Vector2(1, 1);
         }
         else if (_axisH < 0.0f)
         {
-            // ¶‚ÉˆÚ“®
-            // ¶‰E‚É”½“]‚³‚¹‚é
+            // ï¿½ï¿½ï¿½ÉˆÚ“ï¿½
+            // ï¿½ï¿½ï¿½Eï¿½É”ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             transform.localScale = new Vector2(-1, 1);
         }
-        // Player‚ğƒWƒƒƒ“ƒv‚³‚¹‚é
+        // Playerï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (Input.GetButtonDown("Jump"))
         {
             Jump();
         }
-        // “®‚©‚·
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (Input.GetButtonDown("Fire3"))
         {
             moveblock = true;
@@ -95,30 +95,30 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// ‘¬“xXV
+    /// ï¿½ï¿½ï¿½xï¿½Xï¿½V
     /// </summary>
     void FixedUpdate()
     {
-        // ƒQ[ƒ€’†ˆÈŠO‚Íƒƒ\ƒbƒh“à‚ÌˆÈ‰º‚Ì”»’è‚ğÀs‚µ‚È‚¢
+        // ï¿½Qï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ÈŠOï¿½Íƒï¿½ï¿½\ï¿½bï¿½hï¿½ï¿½ï¿½ÌˆÈ‰ï¿½ï¿½Ì”ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½È‚ï¿½
         if (_gameState != "playing")
         {
             return;
         }
-        // ’nã”»’è
+        // ï¿½nï¿½ã”»ï¿½ï¿½
         _onGround = Physics2D.Linecast(transform.position, transform.position - (transform.up * 1.1f), groundLayer);
-        // ’n–Ê‚Ìã‚à‚µ‚­‚Í‘¬“x‚ª0‚Å‚Í‚È‚¢
+        // ï¿½nï¿½Ê‚Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í‘ï¿½ï¿½xï¿½ï¿½0ï¿½Å‚Í‚È‚ï¿½
         if (_onGround || _axisH != 0)
         {
-            // ‘¬“x‚ğXV‚·‚é
+            // ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½
             rbody.velocity = new Vector2(_axisH * _speed, rbody.velocity.y);
         }
-        // ’n–Ê‚Ìã‚ÅƒWƒƒƒ“ƒvƒL[‚ª‰Ÿ‚³‚ê‚½
+        // ï¿½nï¿½Ê‚Ìï¿½ÅƒWï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Lï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‚½
         if (_onGround && _gojump)
         {
-            Debug.Log("ƒWƒƒƒ“ƒvƒ{ƒ^ƒ“‚ğ‚¨‚µ‚½");
-            // ƒWƒƒƒ“ƒv‰Â”\
-            Vector2 jumpPw = new Vector2(0, _jump);         //‚¶‚á‚ñ‚Õ‚³‚¹‚é‚½‚ß‚Ìƒƒ\ƒbƒh
-            rbody.AddForce(jumpPw, ForceMode2D.Impulse);    //uŠÔ“I‚È—Í‚ğ‰Á‚¦‚é
+            Debug.Log("ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½{ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+            // ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Â”\
+            Vector2 jumpPw = new Vector2(0, _jump);         //ï¿½ï¿½ï¿½ï¿½ï¿½Õ‚ï¿½ï¿½ï¿½ï¿½é‚½ï¿½ß‚Ìƒï¿½ï¿½\ï¿½bï¿½h
+            rbody.AddForce(jumpPw, ForceMode2D.Impulse);    //ï¿½uï¿½Ô“Iï¿½È—Í‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             _gojump = false;
         }
         if (_onGround)
@@ -141,33 +141,33 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒWƒƒƒ“ƒv‚·‚é‚½‚ß‚Ìƒƒ\ƒbƒh
+    /// ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½é‚½ï¿½ß‚Ìƒï¿½ï¿½\ï¿½bï¿½h
     /// </summary>
     public void Jump()
     {
 
-        Debug.Log("ƒ{ƒ^ƒ“„‚µ‚½");
-        _gojump = true;         //ƒWƒƒƒ“ƒvƒtƒ‰ƒO‚ğŒš‚Ä‚é
+        Debug.Log("ï¿½{ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        _gojump = true;         //ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½tï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½
     }
 
     /// <summary>
-    /// ÚGŠJn
+    /// ï¿½ÚGï¿½Jï¿½n
     /// </summary>
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Goal")
         {
-            // ƒS[ƒ‹ƒƒ\ƒbƒh‚ğŒÄ‚Ô
+            // ï¿½Sï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½\ï¿½bï¿½hï¿½ï¿½ï¿½Ä‚ï¿½
             Goal();
         }
         else if (collision.gameObject.tag == "Dead")
         {
-            // ƒQ[ƒ€ƒI[ƒo[ƒƒ\ƒbƒh‚ğŒÄ‚Ô
+            // ï¿½Qï¿½[ï¿½ï¿½ï¿½Iï¿½[ï¿½oï¿½[ï¿½ï¿½ï¿½\ï¿½bï¿½hï¿½ï¿½ï¿½Ä‚ï¿½
             GameOver();
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    /*private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "MoveBlock" && moveblock)
         {
@@ -179,14 +179,14 @@ public class PlayerController : MonoBehaviour
             movblock1.Move();
             movblock2.Move();
         }
-    }
+    }*/
 
-    private void OnCollisionExit2D(Collision2D collision)
+    /*private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "MoveBlock")
         {
             moveblock = false;
-            Debug.Log("~‚ß‚Ü‚µ‚å‚¤");
+            Debug.Log("ï¿½~ï¿½ß‚Ü‚ï¿½ï¿½å‚¤");
             MoveBlock movblock = targetMoveBlock.GetComponent<MoveBlock>();
             MoveBlock movblock1 = TargetMoveBlock.GetComponent<MoveBlock>();
             MoveBlock movblock2 = TArgetMoveBlock.GetComponent<MoveBlock>();
@@ -194,39 +194,39 @@ public class PlayerController : MonoBehaviour
             movblock1.Stop();
             movblock2.Stop();
         }
-    }
+    }*/
 
     /// <summary>
-    /// ƒS[ƒ‹ƒƒ\ƒbƒh
+    /// ï¿½Sï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½\ï¿½bï¿½h
     /// </summary>
     public void Goal()
     {
         Debug.Log("Goal");
         _gameState = "gameclear";
-        // ƒQ[ƒ€’â~ƒƒ\ƒbƒh‚ğŒÄ‚Ô
+        // ï¿½Qï¿½[ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½\ï¿½bï¿½hï¿½ï¿½ï¿½Ä‚ï¿½
         SceneManager.LoadScene("Goal Scene");
     }
 
     /// <summary>
-    /// ƒQ[ƒ€ƒI[ƒo[ƒƒ\ƒbƒh
+    /// ï¿½Qï¿½[ï¿½ï¿½ï¿½Iï¿½[ï¿½oï¿½[ï¿½ï¿½ï¿½\ï¿½bï¿½h
     /// </summary>
     public void GameOver()
     {
-        Debug.Log("‚µ‚ñ‚¾");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½");
         _gameState = "gameover";
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        // ƒvƒŒƒCƒ„[‚ğ­‚µã‚Éã‚°‚é
+        // ï¿½vï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éã‚°ï¿½ï¿½
         rbody.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
     }
 
     /// <summary>
-    /// ƒQ[ƒ€’â~ƒƒ\ƒbƒh
+    /// ï¿½Qï¿½[ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½\ï¿½bï¿½h
     /// </summary>
     void GameStop()
     {
-        // Rigidbody2D‚ğ‚Æ‚Á‚Ä‚­‚é
+        // Rigidbody2Dï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½
         Rigidbody2D rbody = GetComponent<Rigidbody2D>();
-        // ‘¬“x0‚Å‹­§’â~
+        // ï¿½ï¿½ï¿½x0ï¿½Å‹ï¿½ï¿½ï¿½ï¿½ï¿½~
         rbody.velocity = new Vector2(0, 0);
     }
 }

@@ -17,17 +17,17 @@ public class MoveBlock : MonoBehaviour
 
     }
 
-    public void Move()
+    void OnCollisionStay2D(Collision2D collision)
     {
-        var rbody = GetComponent<Rigidbody2D>();
-        rbody.mass = 20;
+        if (collision.gameObject.CompareTag("Player") && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+        {
+            GetComponent<Rigidbody2D>().mass = 20;
+            transform.SetParent(collision.transform);
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().mass = 100;
+            transform.SetParent(null);
+        }
     }
-
-    public void Stop()
-    {
-        Debug.Log("Ž~‚Ü‚é");
-        var rbody = GetComponent<Rigidbody2D>();
-        rbody.mass = 10000;
-    }
-    
 }
