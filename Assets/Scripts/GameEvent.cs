@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 #if UNITY_EDITOR
@@ -8,13 +8,13 @@ using UnityEditor;
 
 public class GameEvent : MonoBehaviour
 {
-    [Tooltip("ƒCƒxƒ“ƒgŠJn‚Ìˆ—")]
+    [Tooltip("ã‚¤ãƒ™ãƒ³ãƒˆé–‹å§‹æ™‚ã®å‡¦ç†")]
     [SerializeField] UnityEvent startEvent;
 
-    [Tooltip("ƒCƒxƒ“ƒgI—¹‚Ìˆ—")]
+    [Tooltip("ã‚¤ãƒ™ãƒ³ãƒˆçµ‚äº†æ™‚ã®å‡¦ç†")]
     [SerializeField] UnityEvent endEvent;
 
-    [Tooltip("ƒXƒy[ƒX‚Åi‚ŞƒCƒxƒ“ƒg")]
+    [Tooltip("ã‚¹ãƒšãƒ¼ã‚¹ã§é€²ã‚€ã‚¤ãƒ™ãƒ³ãƒˆ")]
     [HideInInspector] public UnityEvent[] events;
 
     public void Play()

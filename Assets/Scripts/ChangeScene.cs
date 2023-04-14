@@ -1,11 +1,11 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    /// <summary> “Ç‚İ‚ŞƒV[ƒ“–¼ </summary>
+    /// <summary> èª­ã¿è¾¼ã‚€ã‚·ãƒ¼ãƒ³å </summary>
     public string sceneName;
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class ChangeScene : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒV[ƒ“‚ğ“Ç‚İ‚Ş
+    /// ã‚·ãƒ¼ãƒ³ã‚’èª­ã¿è¾¼ã‚€
     /// </summary>
     public void Load()
     {

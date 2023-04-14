@@ -1,32 +1,32 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    /// <summary> ‰æ‘œ‚ğ‚ÂgameObject </summary>
+    /// <summary> ç”»åƒã‚’æŒã¤gameObject </summary>
     public GameObject mainImage;
-    /// <summary> ƒQ[ƒ€ƒI[ƒo[‰æ‘œ </summary>
+    /// <summary> ã‚²ãƒ¼ãƒ ã‚ªãƒ¼ãƒãƒ¼ç”»åƒ </summary>
     public Sprite gameOverSpr;
-    /// <summary> ƒQ[ƒ€ƒNƒŠƒA‰æ‘œ </summary>
+    /// <summary> ã‚²ãƒ¼ãƒ ã‚¯ãƒªã‚¢ç”»åƒ </summary>
     public Sprite gameClearSpr;
-    /// <summary> ƒpƒlƒ‹ </summary>
+    /// <summary> ãƒ‘ãƒãƒ« </summary>
     public GameObject panel;
-    /// <summary> restartƒ{ƒ^ƒ“ </summary>
+    /// <summary> restartãƒœã‚¿ãƒ³ </summary>
     public GameObject restartButton;
-    /// <summary> nextƒ{ƒ^ƒ“ </summary>
+    /// <summary> nextãƒœã‚¿ãƒ³ </summary>
     public GameObject nextButton;
 
-    /// <summary> ‰æ‘œ‚ğ•\¦‚µ‚Ä‚¢‚éƒCƒ[ƒWƒRƒ“ƒ|[ƒlƒ“ƒg </summary>
+    /// <summary> ç”»åƒã‚’è¡¨ç¤ºã—ã¦ã„ã‚‹ã‚¤ãƒ¡ãƒ¼ã‚¸ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ </summary>
     Image titleImage;
 
     // Start is called before the first frame update
     void Start()
     {
-        // ‰æ‘œ‚ğ”ñ•\¦‚É‚·‚é
+        // ç”»åƒã‚’éè¡¨ç¤ºã«ã™ã‚‹
         Invoke("InactiveImage", 1.0f);
-        // ƒ{ƒ^ƒ“iƒpƒlƒ‹j
+        // ãƒœã‚¿ãƒ³ï¼ˆãƒ‘ãƒãƒ«ï¼‰
     }
 
     // Update is called once per frame
